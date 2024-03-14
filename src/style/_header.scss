@@ -1,0 +1,197 @@
+@use './mixins';
+@use './variables';
+
+.header {
+    height: 80px;
+    padding: 24px 32px;
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+        @include mixins.flex(flex, space-between, center);
+    }
+
+    &__logo {
+     width: 132px;
+     height: 22px;
+     img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+     }
+    }
+
+    &__nav-button-wrapper {
+      position: fixed;
+      z-index: 1;
+      top: 80px;
+      left: 0;
+      right: 0;
+      height: 0px;
+      background: url('./img/menu360.webp') center center / cover no-repeat;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.5s all;
+
+      &_active {
+        transition: 0.5s all;
+        height: 470px; 
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+
+    &__list {
+        @include mixins.flex(flex, space-between, center);
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 57.17px;
+    }
+    
+    &__li {
+      a {
+        color: variables.$link-color;
+        font-size: variables.$font-size40;
+        font-weight: variables.$font-weight400;
+        text-decoration: none;
+      }
+    }
+
+    &__button {
+        width: 304px;
+        height: 54px;
+        text-align: center;
+        @include mixins.flex(flex, center, center);
+        color: variables.$button-header;
+        font-size: variables.$font-size16;
+        font-weight: variables.$font-weight500;
+        border: 1px solid variables.$border-header-button;
+        border-radius: 61px;
+        background: transparent;
+        margin: 0 auto;
+        margin-top: 48px;
+        cursor: pointer;
+    }
+
+    &__burger {
+        width: 32px;
+        height: 32px;
+        @include mixins.flex(flex, center, center);
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        div {
+          transition: variables.$transition;
+          width: 20px;
+          height: 1.5px;
+          background: variables.$bg-line-burger;
+        }
+
+        &_active {
+            div {
+              transition: variables.$transition;
+              margin-bottom: -2px;
+              &:nth-child(1) {
+                transform: translateY(2.5px) rotate(-45deg);
+              }
+              &:nth-child(2) {
+                display: none;
+              }
+              &:nth-child(3) {
+                transform: translateY(-3px) rotate(45deg);
+              }
+        }   }
+    }
+}
+
+@media(min-width: 767px) {
+    .header {
+    height: 80px;
+    padding: 24px 32px;
+    &__wrapper {
+        z-index: 2;
+        @include mixins.flex(flex, space-between, center);
+    }
+    
+    &__nav-button-wrapper {
+      @include mixins.flex(flex, space-between, center);
+      gap: 20px;
+      position: initial;
+      z-index: initial;
+      top: initial;
+      left: initial;
+      right: initial;
+      height: initial;
+      background: none;
+      opacity: initial;
+      pointer-events: initial;
+      transition: initial;
+    }
+    
+    &__list {
+        @include mixins.flex(flex, space-between, center);
+        flex-direction: row;
+        gap: 24px;
+        margin-top: initial;
+    }
+    
+    &__li {
+      a {
+        font-size: variables.$font-size14;
+      }
+    }
+    
+    &__button {
+        width: 140px;
+        height: 40px;
+        margin: initial;
+        margin-top: initial;
+        cursor: pointer;
+    }
+    
+    &__burger {
+      display: none;
+    }
+  }
+}
+
+@media(min-width: 991px) {
+    .header {
+    
+    &__nav-button-wrapper {
+      gap: 150px;
+    }
+    
+    &__list {
+        gap: 48px;
+    }
+
+    &__li {
+        a {
+            text-transform: uppercase;
+        }
+    }
+
+    &__button {
+        width: 160px;
+        height: 54px;
+    }
+    
+  }
+}
+
+@media(min-width: 1440px) {
+    .header {
+       height: 102px;
+       padding: 24px 64px;
+       
+        &__logo {
+            width: 192px;
+            height: 32px;
+        }
+
+        &__nav-button-wrapper {
+            gap: 277px;
+        }
+    
+  }
+}

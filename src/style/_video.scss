@@ -1,0 +1,89 @@
+@use './mixins';
+@use './variables';
+
+.video {
+    padding: 64px 0 0 0;
+    margin: 0 auto;
+
+    &__circle {
+      width: 360px;
+      height: 256px;
+      position: relative;
+      border: none;
+      margin: 0 auto;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__button-play {
+        width: 80px;
+        height: 80px;
+        border: 2px solid variables.$video-border-color;
+        border-radius: 86px;
+        backdrop-filter: blur(10px);
+        background: variables.$bg-video-color;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+}
+
+@media(min-width: 575px) {
+    .video {
+        &__circle {
+            width: 576px;
+            height: 256px;
+        }
+    }
+}
+
+@media(min-width: 767px) {
+    .video {
+        &__circle {
+            width: 768px;
+            height: 370px;
+        }
+    }
+}
+
+@media(min-width: 767px) {
+    .video {
+        &__circle {
+            width: 768px;
+            height: 370px;
+        }
+    }
+}
+
+@media(min-width: 991px) {
+    .video {
+        padding: 64px 29px 0 29px;
+        &__circle {
+            width: 934px;
+            height: 370px;
+        }
+    }
+}
+
+@media(min-width: 1440px) {
+    .video {
+        padding: 64px 23.5px 0 23.5px;
+        &__circle {
+            width: initial;
+            height: 664px;
+        }
+    }
+}
+
+@media(min-width: 1920px) {
+    .video {
+        &__circle {
+            width: 1550px;
+        }
+    }
+}
