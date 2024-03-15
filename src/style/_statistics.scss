@@ -1,0 +1,200 @@
+@use './mixins';
+@use './variables';
+
+.statistics {
+    padding: 80px 24px 0 24px;
+    background: variables.$main-color2;
+    &__wrapper {
+        @include mixins.flex(flex, center, flex-end);
+        flex-direction: column;
+    }
+
+    &__omoss {
+        width: 87px;
+        height: 33px;
+        @include mixins.flex(flex, center, center);
+        text-align: center;
+        border: 1px solid variables.$apen-title-text;
+        border-radius: 32px;
+        text-decoration: none;
+        color: variables.$apen-title-text;
+        font-size: variables.$font-size14;
+        font-weight: variables.$font-weight400;
+        text-transform: uppercase;
+    }
+
+    &__hightlight {
+        font-weight: variables.$font-weight400;
+    }
+
+    &__title {
+        color: variables.$primary-button-text;
+        font-size: variables.$font-size40;
+        font-weight: variables.$font-weight600;
+        line-height: 110%;
+        text-align: left;
+        margin-top: 24px;
+    } 
+
+    &__text-block {
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-template-areas: 
+       'text1'
+       'text2'
+       'button';
+       margin-top: 24px;
+    }
+
+    &__sub-block1 {
+        color: variables.$link-color-workers;
+        font-size: variables.$font-size16;
+        font-weight: variables.$font-weight600;
+        line-height: 130%;
+        text-align: left;
+        grid-area: text1;
+        text-transform: capitalize;
+    }
+
+    &__sub-block-button {
+        width: 312px;
+        height: 54px;
+        border-radius: 29px;
+        background: variables.$primary-button;
+        border: none;
+        color: variables.$primary-button-text;
+        font-size: variables.$font-size16;
+        font-weight: variables.$font-weight500;
+        @include mixins.flex(flex, center, center);
+        text-align: center;
+        cursor: pointer;
+        grid-area: button;
+        margin-top: 32px;
+    }
+
+    &__sub-block2 {
+        color: variables.$omos-text;
+        font-size: variables.$font-size14;
+        font-weight: variables.$font-weight400;
+        line-height: 150%;
+        text-align: left;
+        grid-area: text2;
+        margin-top: 16px;
+    }
+
+    &__results {
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-template-rows: auto;
+       gap: 32px;
+       margin-top: 48px;
+    }
+
+    &__quantity {
+        color: variables.$apen-title-text;
+        font-style: italic;
+        font-size: variables.$font-size48;
+        font-weight: variables.$font-weight400;
+        line-height: 100%;
+        text-align: left;
+    }
+
+    &__results-text {
+        color: variables.$video-border-color;
+        font-size: variables.$font-size14;
+        font-weight: variables.$font-weight400;
+        line-height: 150%;
+        text-align: left;
+        overflow: hidden;
+        margin-top: 12px;
+    }
+}
+
+@media(min-width: 767px) {
+    .statistics {
+        &__title-block {
+            width: 100%;
+            @include mixins.flex(flex, space-between, flex-start);
+        }
+
+        &__title {
+            width: 425px;
+            margin-top: 0;
+        }
+
+        &__text-block {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "text1 text2"
+                "button .";
+            margin-top: 42px 
+        }
+
+        &__sub-block2 {
+            margin-top: 0;
+        }
+
+        &__results {
+            grid-template-columns: 400px;
+        }
+    }
+}
+
+@media(min-width: 991px) {
+    .statistics {
+        padding: 0 24px 0 24px;
+        &__title-block {
+            width: 100%;
+            @include mixins.flex(flex, space-between, flex-start);
+        }
+
+        &__text-block {
+            grid-template-columns: 400px 400px;
+            gap: 30px;
+        }
+    }
+}
+
+@media(min-width: 1440px) {
+    .statistics {
+        padding: 160px 64px 0 64px;
+
+        &__title {
+            width: 864px;
+            font-size: variables.$font-size72;
+        } 
+
+        &__text-block {
+            grid-template-columns: 400px 410px;
+            gap: 32px;
+        }
+
+        &__sub-block1 {
+            font-size: variables.$font-size18;
+        }
+
+        &__sub-block-button {
+            width: 256px;
+            margin-top: 52px;
+        }
+
+        &__sub-block2 {
+            font-size: variables.$font-size16;
+        }
+
+        &__results {
+            grid-template-columns: 321px 321px;
+            column-gap: 144px;
+            row-gap: 80px;
+            margin-right: 50px;
+        }
+
+        &__quantity {
+            font-size: variables.$font-size96;
+        }
+
+        &__results-text {
+            font-size: variables.$font-size16;
+        }
+    }
+}

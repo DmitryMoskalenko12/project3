@@ -3,6 +3,10 @@
 @import './style/main';
 @import './style/video';
 @import './style/workers';
+@import './style/lines1';
+@import './style/statistics';
+@import './style/helmet';
+@import './style/baneservice';
 
 @font-face {
     font-family: 'Poppins';
@@ -81,9 +85,7 @@
   }
 
   @media (min-width: 320px) {
-    body {
-        background: url('img/mobile.webp') top center / cover no-repeat;
-    }
+
     .container {
       width: auto;
     }
@@ -108,9 +110,6 @@
   }
   
   @media (min-width: 1440px) {
-    body {
-        background: url('img/desktop.png') top center / cover no-repeat;
-    }
 
     .container {
       max-width: 1312px;

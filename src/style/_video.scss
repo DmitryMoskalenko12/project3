@@ -4,7 +4,7 @@
 .video {
     padding: 64px 0 0 0;
     margin: 0 auto;
-
+    background: variables.$main-color;
     &__circle {
       width: 360px;
       height: 256px;
@@ -82,6 +82,7 @@
 
 @media(min-width: 1920px) {
     .video {
+        padding: 64px 23.5px 8px 23.5px;
         &__circle {
             width: 1550px;
         }
