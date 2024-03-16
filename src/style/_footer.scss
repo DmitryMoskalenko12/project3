@@ -1,0 +1,191 @@
+@use './mixins';
+@use './variables';
+
+.footer {
+    padding: 144px 24px 24px 24px;
+    background: variables.$main-color2;
+
+    &__title {
+        color: variables.$main-color;
+        font-size: variables.$font-size40;
+        font-weight: variables.$font-weight400;
+        line-height: 110%;
+        text-align: left;
+    }
+
+    &__hightlight {
+        font-weight: variables.$font-weight600;
+    }
+
+    &__contact-wrap {
+        @include mixins.flex(flex, center, center);
+        flex-direction: column;
+    }
+
+    &__button {
+        width: 312px;
+        height: 54px;
+        border-radius: 29px;
+        background: variables.$primary-button;
+        border: none;
+        @include mixins.flex(flex, center, center);
+        cursor: pointer;
+        color: variables.$main-color;
+        font-size: variables.$font-size16;
+        font-weight: variables.$font-weight500;
+        margin-top: 40px;
+    }
+
+    &__email {
+        width: 312px;
+        height: 54px;
+        @include mixins.flex(flex, center, center);
+        border: 1px solid variables.$main-color;
+        border-radius: 29px;
+        background: transparent;
+        text-decoration: none;
+        color: variables.$main-color;
+        font-size: variables.$font-size16;
+        font-weight: variables.$font-weight500;
+        text-align: center;
+        margin-top: 16px;
+    }
+
+    &__contact-wrap2 {
+        @include mixins.flex(flex, center, center);
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 64px;
+    }
+
+    &__list {
+        @include mixins.flex(flex, center, center);
+        flex-wrap: wrap;
+    }
+
+    &__link {
+      a {
+        color: variables.$line-color;
+        font-size: variables.$font-size12;
+        font-weight: variables.$font-weight400;
+        text-align: center;
+        text-decoration: none;
+        padding: 0 12px 0 12px;
+      }
+    }
+
+    &__info {
+        @include mixins.flex(flex, center, center);
+        flex-direction: column;
+        margin-top: 24px;
+        gap: 8px;
+    }
+
+    &__all-rights {
+        color: variables.$line-color;
+        font-size: variables.$font-size12;
+        font-weight: variables.$font-weight400;
+        text-align: center;
+    }
+
+    &__policy {
+        color: variables.$line-color;
+        font-size: variables.$font-size12;
+        font-weight: variables.$font-weight400;
+        text-align: center;
+        text-decoration: none;
+    }
+}
+
+@media(min-width: 767px) {
+    .footer {
+        &__title {
+            width: 418px;
+        }
+
+        &__contact-wrap {
+            @include mixins.flex(flex, flex-start, center);
+            margin-top: 40px;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        &__button {
+            margin-top: 0;
+        }
+
+        &__email {
+            margin-top: 0;
+        }
+
+        &__info {
+            flex-direction: row;
+        }
+    }
+}
+
+@media(min-width: 991px) {
+    .footer {
+        padding: 100px 24px 24px 24px;
+        &__title {
+            width: 418px;
+        }
+
+        &__link {
+            &_pn {
+                a {
+                    padding-left: 0
+                }
+            }
+        }
+
+        &__contact-wrap2 {
+            @include mixins.flex(flex, space-between, center);
+            flex-direction: row;
+            gap: 0;
+        }
+
+        &__info {
+            margin-top: 0;
+        }
+    }
+}
+
+@media(min-width: 1440px) {
+    .footer {
+        padding: 160px 64px 24px 64px;
+        &__title {
+            font-size: variables.$font-size72;
+            width: 976px;
+        }
+
+        &__button {
+            width: 254;
+            height: 54px;
+        }
+
+        &__email {
+            width: 369px;
+            height: 54px;
+        }
+
+        &__list {
+            @include mixins.flex(flex, space-between, center);
+            width: 627px;
+        }
+
+        &__link {
+          a {
+            font-size: variables.$font-size14;
+          }
+        }
+
+        &__all-rights, &__policy {
+            font-size: variables.$font-size14;
+        }
+
+        &__info {
+            gap: 24px;
+        }
+    }
+} 

@@ -9,6 +9,9 @@
 @import './style/baneservice';
 @import './style/lines2';
 @import './style/carousel';
+@import './style/trenger';
+@import './style/lines3';
+@import './style/footer';
 
 @font-face {
     font-family: 'Poppins';
@@ -87,7 +90,6 @@
   }
 
   @media (min-width: 320px) {
-
     .container {
       width: auto;
     }
@@ -112,7 +114,6 @@
   }
   
   @media (min-width: 1440px) {
-
     .container {
       max-width: 1312px;
     }

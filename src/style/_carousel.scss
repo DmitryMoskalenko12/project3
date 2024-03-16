@@ -131,7 +131,7 @@
         padding: 160px 64px;
         &__slide {
             @include mixins.flex(flex, center, center);
-            gap: 319px;
+            gap: 336px;
         }
 
         &__ml {
