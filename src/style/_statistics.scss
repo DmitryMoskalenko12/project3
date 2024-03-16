@@ -4,6 +4,7 @@
 .statistics {
     padding: 80px 24px 0 24px;
     background: variables.$main-color2;
+    position: relative;
     &__wrapper {
         @include mixins.flex(flex, center, flex-end);
         flex-direction: column;
@@ -108,6 +109,18 @@
         overflow: hidden;
         margin-top: 12px;
     }
+
+    &__lines3 {
+        display: none;
+    }
+
+    &__lines2 {
+        position: absolute;
+        display: block;
+        bottom: -320px;
+        right: 0;
+    }
+
 }
 
 @media(min-width: 767px) {
@@ -152,6 +165,30 @@
             grid-template-columns: 400px 400px;
             gap: 30px;
         }
+
+        &__sub-block-button {
+            transition: variables.$transition;
+            &:hover {
+                transition: variables.$transition;
+                background: variables.$hover-main-button;
+            }
+  
+            &:active {
+                background: variables.$active-main-button;
+            }
+        }
+
+        &__omoss {
+            transition: variables.$transition;
+            &:hover {
+              transition: variables.$transition;
+              background: variables.$hover-second-button;
+            }
+    
+            &:active {
+              background: variables.$active-second-button;
+            }
+        }
     }
 }
 
@@ -195,6 +232,17 @@
 
         &__results-text {
             font-size: variables.$font-size16;
+        }
+
+        &__lines3 {
+            position: absolute;
+            display: block;
+            bottom: -452px;
+            right: 0;
+        }
+
+        &__lines2 {
+            display: none;
         }
     }
 }

@@ -132,10 +132,32 @@
         }
 
         &__link {
+            a {
+                transition: variables.$transition;
+                &:hover {
+                    transition: variables.$transition;
+                    color:variables.$footer-hover-link;
+                }
+                &:active {
+                    color: variables.$footer-active-link;
+                }
+            }
             &_pn {
                 a {
-                    padding-left: 0
+                    padding-left: 0;
                 }
+            }
+        }
+
+        &__button {
+            transition: variables.$transition;
+            &:hover {
+                transition: variables.$transition;
+                background: variables.$hover-main-button;
+            }
+  
+            &:active {
+                background: variables.$active-main-button;
             }
         }
 
@@ -147,6 +169,28 @@
 
         &__info {
             margin-top: 0;
+        }
+
+        &__policy {
+            transition: variables.$transition;
+            &:hover {
+                transition: variables.$transition;
+                color:variables.$footer-hover-link;
+            }
+            &:active {
+                color: variables.$footer-active-link;
+            }
+        }
+
+        &__email {
+            transition: variables.$transition;
+            &:hover {
+                transition: variables.$transition;
+                background: variables.$hover-second-button;
+            }
+            &:active {
+                background: variables.$active-second-button;
+            }
         }
     }
 }
@@ -160,7 +204,7 @@
         }
 
         &__button {
-            width: 254;
+            width: 254px;
             height: 54px;
         }
 
@@ -171,7 +215,7 @@
 
         &__list {
             @include mixins.flex(flex, space-between, center);
-            width: 627px;
+            width: 569px;
         }
 
         &__link {

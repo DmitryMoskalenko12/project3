@@ -2,6 +2,7 @@
 @use './variables';
 
 .main {
+    position: relative;
     padding: 32px 24px;
     background: variables.$main-color;
 
@@ -44,10 +45,13 @@
         color: variables.$primary-button-text;
         font-size: variables.$font-size16;
         font-weight: variables.$font-weight500;
-        line-height: 140%;
         text-align: left;
         margin: 0 auto;
         margin-top: 32px;
+    }
+
+    &__lines {
+        display: none;
     }
 
 }
@@ -74,13 +78,25 @@
         &__text {
             margin-top: 0;
         }
+
+        &__button {
+            transition: variables.$transition;
+            &:hover {
+                transition: variables.$transition;
+                background: variables.$hover-main-button;
+            }
+  
+            &:active {
+                background: variables.$active-main-button;
+            }
+        }
     }
 }
 
 @media(min-width: 1440px) {
     .main {
+        padding: 64px 41px 80px 87px;
         &__wrapper {
-            padding-top: 64px;
             grid-template-columns: 1fr minmax(min-content, 304px);
         }
 
@@ -95,7 +111,26 @@
         }
 
         &__content {
-            align-self: flex-end;
+            position: relative;
+            z-index: 1;
+            width: 304px;
+            justify-self: left;
+            align-self: end;
+        }
+
+        &__button {
+            width: 256px;
+            margin: initial;
+            margin-top: 32px;
+        }
+
+        &__lines {
+            opacity: 0.2;
+            display: initial;
+            position: absolute;
+            top: 23px;
+            right: -31px;
+            transform: rotateY(24deg);
         }
     }
 }

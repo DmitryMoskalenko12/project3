@@ -217,6 +217,152 @@
 
 }
 
+@media(min-width: 991px) {
+    .helmet {
+        &__img-wrapper {
+            width: 920px;
+            height: auto;
+        }
+
+        &__title {
+            width: 360px;
+        }
+
+        &__button {
+            width: 185px;
+            transition: variables.$transition;
+            &:hover {
+              transition: variables.$transition;
+              background: variables.$hover-second-button;
+            }
+    
+            &:active {
+              background: variables.$active-second-button;
+            }
+        }
+
+        &__line-descr1 {
+            bottom: 272px;
+            left: 284px;
+            @include mixins.lineDescrContent;
+            &:after {
+                content:'';
+                position: absolute;
+                height: 80.19px;
+                left: 43.9px;
+                transform: rotate(-25.13deg);
+                border: 1px solid variables.$line-color;
+                opacity: 0.4;
+                margin-top: 14px;
+            }
+        }
+    
+        &__line-descr2 {
+            left: 343px;
+            bottom: 252px;
+            @include mixins.lineDescrContent;
+            &:after {
+                content:'';
+                position: absolute;
+                height: 24.7px;
+                left: 34.46px;
+                transform: rotate(-16.99deg);
+                border: 1px solid variables.$line-color;
+                opacity: 0.4;
+                margin-top: 11px;
+            }
+        }
+    
+        &__line-descr3 {
+            left: 362px;
+            bottom: 288px;
+            @include mixins.lineDescrContent;
+            &:after {
+                content:'';
+                position: absolute;
+                height: 45.54px;
+                left: 55px;
+                transform: rotate(-13.27deg);
+                border: 1px solid variables.$line-color;
+                opacity: 0.4;
+                margin-top: 16px;
+            }
+        }
+    
+        &__line-descr4 {
+            height: 111px;
+            left: 446px;
+            bottom: 185px;
+            @include mixins.lineDescrContent;
+            &:after {
+                content:'';
+                position: absolute;
+                height: 30.54px;
+                left: 24px;
+                transform: rotate(6.73deg);
+                border: 1px solid variables.$line-color;
+                opacity: 0.4;
+                margin-top: 15px;
+            }
+        }
+    
+        &__line-descr5 {
+            width: 249px;
+            height: 21px;
+            left: 466px;
+            bottom: 310px;
+            @include mixins.lineDescrContent;
+            &:after {
+                content:'';
+                position: absolute;
+                height: 72.96px;
+                left: 61px;
+                transform: rotate(29.73deg);
+                border: 1px solid variables.$line-color;
+                opacity: 0.4;
+                margin-top: 15px;
+            }
+        }
+    
+        &__line-descr6 {
+            width: 156px;
+            height: 21px;
+            left: 556px;
+            bottom: 266px;
+            @include mixins.lineDescrContent;
+            &:after {
+                content:'';
+                position: absolute;
+                height: 49.11px;
+                top: 18px;
+                left: 12px;
+                transform: rotate(40.73deg);
+                border: 1px solid variables.$line-color;
+                opacity: 0.4;
+                margin-top: -9px;
+            }
+        }
+    
+        &__line-descr7 {
+            width: 65px;
+            height: 21px;
+            left: 586px;
+            bottom: 230px;
+            @include mixins.lineDescrContent;
+            &:after {
+                content:'';
+                position: absolute;
+                height: 28.25px;
+                left: -7px;
+                transform: rotate(49.73deg);
+                border: 1px solid variables.$line-color;
+                opacity: 0.4;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
 @media(min-width: 1440px) {
     .helmet {
         padding: 160px 28px 80px 28px;
@@ -295,6 +441,14 @@
             @include mixins.flex(flex, center, center);
             margin-top: 24.72px;
             cursor: pointer;
+            &:hover {
+                transition: variables.$transition;
+                background: variables.$hover-second-button;
+              }
+      
+            &:active {
+                background: variables.$active-second-button;
+            }
         }
 
         &__line-descr1 {
@@ -358,18 +512,19 @@
         }
     
         &__line-descr4 {
+            width: initial;
             height: 111px;
-            left: 845px;
+            left: 855px;
             top: 226px;
             bottom: 0;
             @include mixins.lineDescrContent1440;
             &:after {
                 content:'';
                 position: absolute;
-                height: 42.14px;
-                left: 23px;
+                height: 50.14px;
+                left: 27px;
                 top: 26.26px;
-                transform: rotate(46.73deg);
+                transform: rotate(37.73deg);
                 border: 1px solid variables.$line-color;
                 opacity: 0.4;
                 margin-top: 1px;

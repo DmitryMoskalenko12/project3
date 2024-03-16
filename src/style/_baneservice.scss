@@ -117,6 +117,15 @@
 
         &__button {
             margin-top: 32px;
+            transition: variables.$transition;
+            &:hover {
+                transition: variables.$transition;
+                background: variables.$hover-main-button;
+            }
+  
+            &:active {
+                background: variables.$active-main-button;
+            }
         }
 
         &__carousel {

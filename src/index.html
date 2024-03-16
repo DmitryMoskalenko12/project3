@@ -7,46 +7,53 @@
 </head>
 <body>
     <header class="header">
+      <div class="container">
         <div class="header__wrapper">
-            <picture class="header__logo">
-                <source
-                  width='192'
-                  height='32'
-                  media="(min-width: 1440px)"
-                  srcSet="img/logo1440.webp"
-                />
-                 <source
-                  width='132'
-                  height='22'
-                  media="(min-width: 320px)"
-                  srcSet="img/logo360.webp"
-                />
-                <img src='img/logo360.webp' alt='You will see logo' width='132' height='22'/>
-              </picture>
-    
-          <div class="header__nav-button-wrapper">
-            <nav class="header__nav">
-                <ul class="header__list">
-                   <li class="header__li"><a href="#">Stilling</a></li>
-                   <li class="header__li"><a href="#">Omoss</a></li>
-                   <li class="header__li"><a href="#">Benefits</a></li>
-                   <li class="header__li"><a href="#">Testimonial</a></li>
-                </ul>
-            </nav>
-    
-            <button class="header__button">Fyll hjelmen</button>
-          </div>
-
-          <div class="header__burger">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-
+         <a title="Logo" href="#">
+          <picture class="header__logo">
+            <source
+              width='192'
+              height='32'
+              media="(min-width: 1440px)"
+              srcSet="img/logo1440.webp"
+            />
+             <source
+              width='132'
+              height='22'
+              media="(min-width: 320px)"
+              srcSet="img/logo360.webp"
+            />
+            <img src='img/logo360.webp' alt='You will see logo' width='132' height='22'/>
+          </picture>
+         </a>
+  
+        <div class="header__nav-button-wrapper">
+          <nav class="header__nav">
+              <ul class="header__list">
+                 <li class="header__li"><a href="#">Stilling</a></li>
+                 <li class="header__li"><a href="#">Omoss</a></li>
+                 <li class="header__li"><a href="#">Benefits</a></li>
+                 <li class="header__li"><a href="#">Testimonial</a></li>
+              </ul>
+          </nav>
+  
+          <button class="header__button">Fyll hjelmen</button>
         </div>
+
+        <div class="header__burger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+      </div>
+      </div>
     </header>
     <main>
      <section class="main">
+      <div class="main__lines">
+        <img src="./img/bg-lines.webp" alt="lines">
+     </div>
        <div class="container">
         <div class="main__wrapper">
            <h1 class="main__title">
@@ -90,6 +97,12 @@
         </div>
      </div>
      <section class="workers">
+      <div class="workers__lines2">
+        <img src="./img/bg-lines2.webp" alt="lines">
+      </div>
+      <div class="workers__lines">
+        <img src="./img/bg-lines360.webp" alt="lines">
+      </div>
       <div class="container">
        <div class="workers__wrapper">
         <div class="workers__text-block">
@@ -110,18 +123,14 @@
             <div class="workers__img">
                 <picture>
                     <source
-                      width='640'
-                      height='384'
                       media="(min-width: 1440px)"
-                      srcSet="img/image1.webp"
+                      srcset="img/image1.webp"
                     />
                      <source
-                      width='312'
-                      height='384'
                       media="(min-width: 320px)"
-                      srcSet="img/image360.webp"
+                      srcset="img/image360.webp"
                     />
-                    <img src='img/image360.webp' alt='You will see logo' width='312' height='384'/>
+                    <img src='img/image360.webp' alt='You will see employee' width='312' height='384'/>
                   </picture>
                   <div class="workers__prof-block">
                      <h3 class="workers__prof-title">Prosjektleder</h3>
@@ -287,16 +296,24 @@
           media="(min-width: 1440px)"
           srcset="img/line.webp"
         />
-         <source
-          width='360'
-          height='256'
+        <source
+          media="(min-width: 767px)"
+          srcset="img/line.webp"
+        />
+        <source
           media="(min-width: 320px)"
           srcset="img/line360.webp"
         />
-        <img src='img/line360.webp' alt='You will see logo'/>
+        <img src='img/line360.webp' alt='You will see lines'/>
       </picture>
      </div>
      <section class="statistics">
+       <div class="statistics__lines3">
+        <img src="./img/bg-lines3.webp" alt="lines">
+       </div>
+       <div class="statistics__lines2">
+        <img src="./img/bg-lines2360.webp" alt="lines">
+       </div>
        <div class="container">
         <div class="statistics__wrapper">
             <div class="statistics__title-block">
@@ -342,6 +359,10 @@
           <picture>
             <source
               media="(min-width: 1440px)"
+              srcset="img/bg-diff.webp"
+            />
+            <source
+              media="(min-width: 991px)"
               srcset="img/bg-diff.webp"
             />
              <source
@@ -519,14 +540,21 @@
           media="(min-width: 1440px)"
           srcset="img/line2.webp"
         />
+        <source
+          media="(min-width: 767px)"
+          srcset="img/line2.webp"
+        />
          <source
           media="(min-width: 320px)"
           srcset="img/line2360.webp"
         />
-        <img src='img/line2360.webp' alt='You will see line'/>
+        <img src='img/line2360.webp' alt='You will see lines'/>
       </picture>
      </div>
      <section class="carousel">
+      <div class="carousel__lines4">
+        <img src="./img/bg-lines4.webp" alt="lines">
+      </div>
       <div class="container">
         <div class="carousel__slider-container">
           <div class="carousel__wrapper">
@@ -594,7 +622,11 @@
           media="(min-width: 1440px)"
           srcset="img/line3.webp"
         />
-         <source
+        <source
+          media="(min-width: 767px)"
+          srcset="img/line3.webp"
+        />
+        <source
           media="(min-width: 320px)"
           srcset="img/line3360.webp"
         />

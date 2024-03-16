@@ -4,6 +4,7 @@
 .workers {
     background: variables.$main-color;
     padding: 72px 24px 1px 24px;
+    position: relative;
     &__wrapper {
         @include mixins.flex(flex, left, center);
         flex-direction: column;
@@ -66,7 +67,7 @@
     &__img {
        position: relative;
        width: 100%;
-       height: 100%;
+       height: 99.38%;
        img {
         width: 100%;
         height: 100%;
@@ -175,6 +176,17 @@
         margin-top: 32px;
     }
 
+    &__lines {
+        position: absolute;
+        right: 0px;
+        top: -69px;
+        z-index: 1;
+    }
+
+    &__lines2 {
+        display: none;
+    }
+
 }
 
 @media(min-width: 575px) {
@@ -203,14 +215,67 @@
         &__employees {
             grid-template-columns: repeat(2, minmax(450px, auto));
             grid-template-rows: repeat(3, 384px);
+            position: relative;
+            z-index: 3;
+        }
+
+        &__text-block {
+            width: 100%;
+            @include mixins.flex(flex, space-between, flex-start);
+            gap: 24px;
+            flex-direction: row;
         }
 
         &__apen {
            height: 100%;
         }
-
+        
+        &__vacancies {
+            position: relative;
+            z-index: 3;
+            transition: variables.$transition;
+            &:hover {
+              transition: variables.$transition;
+              background: variables.$hover-second-button;
+            }
+    
+            &:active {
+              background: variables.$active-second-button;
+            }
+        }
+        
         &__apen-button {
             margin-top: 13px;
+            transition: variables.$transition;
+            &:hover {
+                transition: variables.$transition;
+                background: variables.$hover-main-button;
+            }
+
+            &:active {
+                background: variables.$active-main-button;
+            }
+        }
+
+        &__fyll {
+            &:hover {
+                svg {
+                    transition: variables.$transition;
+                    transform: translateX(20%);
+                }
+            }
+        }
+
+        &__category {
+            transition: variables.$transition;
+            &:hover {
+                transition: variables.$transition;
+                background: variables.$hover-second-button;
+            }
+
+            &:active {
+                background: variables.$active-second-button;
+            }
         }
 
     }
@@ -236,7 +301,7 @@
 
 @media(min-width: 1440px) {
     .workers {
-        padding: 138px 55.5px 1px 55.5px;
+        padding: 138px 55.5px 160px 55.5px;
 
         &__wrapper {
             @include mixins.flex(flex, left, flex-end);
@@ -253,9 +318,14 @@
             }
         }
 
+        &__img {
+            height: 100%;
+        }
+
         &__employees {
             grid-template-columns: 640px 640px;
             gap: 32px;
+            margin-bottom: 0;
         }
 
         &__text-block {
@@ -314,6 +384,17 @@
         }
 
         &__br {
+            display: none;
+        }
+        
+        &__lines2 {
+           display: block;
+           position: absolute;
+           top: -462px;
+           right: 0px;
+        }
+
+        &__lines {
             display: none;
         }
     }

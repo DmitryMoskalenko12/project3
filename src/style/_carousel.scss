@@ -4,6 +4,7 @@
 .carousel {
     padding: 80px 24px;
     background: variables.$main-color;
+    position: relative;
     &__slide {
         @include mixins.flex(flex, center, center);
         flex-direction: column;
@@ -89,6 +90,7 @@
         border: 1px solid variables.$baneservice-border-color;
         border-radius: 50px;
         cursor: pointer;
+        background: transparent;
     }
 
     &__right-arrow {
@@ -97,6 +99,11 @@
         border: 1px solid variables.$baneservice-border-color;
         border-radius: 50px;
         cursor: pointer;
+        background: transparent;
+    }
+
+    &__lines4 {
+        display: none;
     }
 }
 
@@ -111,6 +118,14 @@
             width: 127px;
             height: 33px;
             font-size: variables.$font-size14;
+            &:hover {
+                transition: variables.$transition;
+                background: variables.$hover-second-button;
+              }
+      
+            &:active {
+                background: variables.$active-second-button;
+            }
         }
 
         &__text {
@@ -122,6 +137,15 @@
         &__navigation {
             @include mixins.flex(flex, flex-end, center);
             gap: 400px;
+        }
+
+        &__left-arrow, &__right-arrow {
+            &:hover {
+                border: 1px solid variables.$arrow-hover;
+                path {
+                    stroke: variables.$arrow-hover;
+                }
+            }
         }
     }
 }
@@ -154,7 +178,7 @@
 
         &__navigation {
             @include mixins.flex(flex, flex-end, center);
-            gap: 690px;
+            gap: 672px;
         }
 
         &__arrows {
@@ -169,5 +193,18 @@
         &__descr {
           font-size: variables.$font-size16;  
         }
+
+        &__lines4 {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -205px;
+        }
+    }
+}
+
+@media(min-width: 1920px) {
+    .carousel {
+        padding: 162px 64px;
     }
 }

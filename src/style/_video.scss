@@ -10,6 +10,7 @@
       height: 256px;
       position: relative;
       border: none;
+      z-index: 3;
       margin: 0 auto;
       img {
         width: 100%;
@@ -62,7 +63,7 @@
 
 @media(min-width: 991px) {
     .video {
-        padding: 64px 29px 0 29px;
+       padding: 64px 20.72px 0 20.7px;
         &__circle {
             width: 934px;
             height: 370px;
@@ -72,7 +73,7 @@
 
 @media(min-width: 1440px) {
     .video {
-        padding: 64px 23.5px 0 23.5px;
+        padding: 0 23.5px 0 23.5px;
         &__circle {
             width: initial;
             height: 664px;
