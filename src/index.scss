@@ -7,6 +7,8 @@
 @import './style/statistics';
 @import './style/helmet';
 @import './style/baneservice';
+@import './style/lines2';
+@import './style/carousel';
 
 @font-face {
     font-family: 'Poppins';
@@ -116,8 +118,3 @@
     }
   }
   
-  @media (min-width: 1920px) {
-    .container {
-      max-width: 1600px;
-    }
-}

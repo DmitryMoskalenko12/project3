@@ -2,7 +2,7 @@
 @use './variables';
 
 .baneservice {
-    padding: 0 24px 0 24px;
+    padding: 0 24px 80px 24px;
     background: variables.$main-color2;
 
     &__wrapper {
@@ -127,7 +127,7 @@
 
 @media(min-width: 1440px) {
     .baneservice {
-        padding: 96px 64px 0 64px;
+        padding: 96px 64px 160px 64px;
         &__wrapper {
             gap: 143px;
         }

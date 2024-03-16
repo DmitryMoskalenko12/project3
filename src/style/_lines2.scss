@@ -1,0 +1,10 @@
+@use './variables';
+
+.lines2 {
+    background: variables.$main-color2;
+    width: 100%;
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
