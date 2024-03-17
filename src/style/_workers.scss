@@ -163,6 +163,7 @@
     &__apen-button {
         width: 264px;
         height: 54px;
+        font-family: 'Poppins';
         @include mixins.flex(flex, center, center);
         text-align: center;
         color: variables.$apen-title-text;
@@ -345,8 +346,8 @@
             position: absolute;
             @include mixins.flex(flex, space-between, flex-start);
             flex-direction: row;
-            top: 24px;
-            left: 24px;
+            top: 32px;
+            left: 20px;
             gap: 16px;
         }
 
@@ -354,9 +355,15 @@
         &__prof-title {
             font-size: variables.$font-size40;
         }
-
+        
+        &__link {
+            bottom: 32px;
+            left: 20px;
+        }
+        
         &__category {
-            width: 140px;
+            padding: 8px 16px;
+            width: initial;
             height: 33px;
             font-size: variables.$font-size14;
         }

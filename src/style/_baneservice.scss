@@ -12,6 +12,7 @@
 
     &__title {
         color: variables.$main-color;
+        font-style: italic;
         font-size: variables.$font-size40;
         font-weight: variables.$font-weight400;
         line-height: 110%;
@@ -19,6 +20,7 @@
     }
 
     &__hightlight {
+        font-style: normal;
         font-weight: variables.$font-weight600;
     }
 
@@ -34,6 +36,7 @@
     &__button {
         width: 312px;
         height: 54px;
+        font-family: 'Poppins';
         border-radius: 29px;
         @include mixins.flex(flex, center, center);
         text-align: center;
@@ -152,7 +155,7 @@
 
         &__button {
             width: 256px;
-            margin-top: 32px;
+            margin-top: 48px;
         }
 
         &__carousel {

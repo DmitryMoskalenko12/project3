@@ -155,7 +155,7 @@
         padding: 160px 64px;
         &__slide {
             @include mixins.flex(flex, center, center);
-            gap: 336px;
+            gap: 319px;
         }
 
         &__ml {
@@ -178,7 +178,8 @@
 
         &__navigation {
             @include mixins.flex(flex, flex-end, center);
-            gap: 672px;
+            gap: 694px;
+            margin-top: 77px;
         }
 
         &__arrows {

@@ -11,6 +11,7 @@
     }
 
     &__logo {
+     display: block;
      width: 132px;
      height: 22px;
      img {
@@ -181,6 +182,7 @@
     &__button {
         width: 160px;
         height: 54px;
+        font-family: 'Poppins';
         transition: variables.$transition;
         &:hover {
           transition: variables.$transition;
@@ -199,16 +201,22 @@
     .header {
        padding: 24px 64px 24px 64px;
         &__wrapper {
+          justify-content: space-between;
           padding: 0;
         }
         
         &__logo {
+            margin-left: -16px;
             width: 192px;
             height: 32px;
         }
 
         &__nav-button-wrapper {
-            gap: 277px;
+          gap: 314px;
+        }
+
+        &__list {
+          gap: 51px;
         }
     
   }
