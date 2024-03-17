@@ -1,11 +1,12 @@
 @use './variables';
 
 .lines3 {
-    background: variables.$main-color2;
+    background: variables.$secondary-light-beige;
     width: 100%;
     padding-top: 3px;
     img {
         width: 100%;
-        object-fit: cover;
+        height: 100%;
+        object-fit: contain;
     }
 }

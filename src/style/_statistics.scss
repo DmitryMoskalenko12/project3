@@ -3,7 +3,7 @@
 
 .statistics {
     padding: 80px 24px 0 24px;
-    background: variables.$main-color2;
+    background: variables.$secondary-light-beige;
     position: relative;
     &__wrapper {
         @include mixins.flex(flex, center, flex-end);
@@ -30,7 +30,7 @@
     }
 
     &__title {
-        color: variables.$primary-button-text;
+        color: variables.$primary-dark-green;
         font-size: variables.$font-size40;
         font-weight: variables.$font-weight600;
         line-height: 110%;
@@ -63,9 +63,9 @@
         height: 54px;
         border-radius: 29px;
         font-family: 'Poppins';
-        background: variables.$primary-button;
+        background: variables.$primary-light-green;
         border: none;
-        color: variables.$primary-button-text;
+        color: variables.$primary-dark-green;
         font-size: variables.$font-size16;
         font-weight: variables.$font-weight500;
         @include mixins.flex(flex, center, center);
@@ -157,7 +157,7 @@
 
 @media(min-width: 991px) {
     .statistics {
-        padding: 0 24px 0 24px;
+        padding: 80px 24px 0 24px;
         &__title-block {
             width: 100%;
             @include mixins.flex(flex, space-between, flex-start);
@@ -204,8 +204,9 @@
         } 
 
         &__text-block {
-            grid-template-columns: 416px 416px;
+            grid-template-columns: 413px 412px;
             gap: 32px;
+            margin-top: 24px;
         }
 
         &__omoss {
@@ -229,7 +230,8 @@
             grid-template-columns: 321px 321px;
             column-gap: 144px;
             row-gap: 80px;
-            margin-right: 77px;
+            margin-right: 88px;
+            margin-top: 80px;
         }
 
         &__quantity {
@@ -249,6 +251,14 @@
 
         &__lines2 {
             display: none;
+        }
+    }
+}
+
+@media(min-width: 2560px) {
+    .statistics {
+        &__lines3 {
+           display: none;
         }
     }
 }

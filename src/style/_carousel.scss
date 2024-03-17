@@ -3,7 +3,7 @@
 
 .carousel {
     padding: 80px 24px;
-    background: variables.$main-color;
+    background: variables.$primary-dark-green;
     position: relative;
     &__slide {
         @include mixins.flex(flex, center, center);
@@ -14,9 +14,9 @@
         width: 113px;
         height: 30px;
         @include mixins.flex(flex, center, center);
-        border: 1px solid variables.$link-color;
+        border: 1px solid variables.$secondary-light-white;
         border-radius: 32px;
-        color: variables.$link-color;
+        color: variables.$secondary-light-white;
         font-size: variables.$font-size12;
         font-weight: variables.$font-weight400;
         line-height: 120%;
@@ -31,7 +31,7 @@
     }
 
     &__text {
-        color: variables.$text-color;
+        color: variables.$secondary-light-white;
         font-size: variables.$font-size24;
         font-weight: variables.$font-weight500;
         line-height: 110%;
@@ -41,7 +41,7 @@
     }
 
     &__name {
-        color: variables.$text-color;
+        color: variables.$secondary-light-white;
         font-size: variables.$font-size14;
         font-weight: variables.$font-weight600;
         text-align: left;
@@ -49,7 +49,7 @@
     }
 
     &__descr {
-        color: variables.$text-color;
+        color: variables.$secondary-light-white;
         font-size: variables.$font-size14;
         font-weight: variables.$font-weight400;
         text-align: left;
@@ -58,7 +58,7 @@
 
     &__navigation {
         @include mixins.flex(flex, space-between, center);
-        margin-top: 40px;
+        margin-top: 45px;
     }
 
     &__dots {
@@ -69,7 +69,7 @@
     &__dot {
         width: 8px;
         height: 8px;
-        background: variables.$link-color;
+        background: variables.$secondary-light-white;
         opacity: 0.6;
         border-radius: 100%;
         border: none;
@@ -179,7 +179,7 @@
         &__navigation {
             @include mixins.flex(flex, flex-end, center);
             gap: 694px;
-            margin-top: 77px;
+            margin-top: 67px;
         }
 
         &__arrows {
@@ -192,14 +192,15 @@
         }
 
         &__descr {
-          font-size: variables.$font-size16;  
+          font-size: variables.$font-size16; 
+          margin-top: 13px; 
         }
 
         &__lines4 {
             display: block;
             position: absolute;
             left: 0;
-            bottom: -205px;
+            bottom: -152px;
         }
     }
 }
@@ -207,5 +208,13 @@
 @media(min-width: 1920px) {
     .carousel {
         padding: 162px 64px;
+    }
+}
+
+@media(min-width: 2560px) {
+    .carousel {
+        &__lines4 {
+           display: none;
+        }
     }
 }

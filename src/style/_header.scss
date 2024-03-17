@@ -2,11 +2,11 @@
 @use './variables';
 
 .header {
-    background: variables.$main-color;
+    background: variables.$primary-dark-green;
     &__wrapper {
         position: relative;
         padding: 24px 32px;
-        z-index: 2;
+        z-index: 4;
         @include mixins.flex(flex, space-between, center);
     }
 
@@ -23,22 +23,29 @@
 
     &__nav-button-wrapper {
       position: absolute;
-      z-index: 1;
+      z-index: -1;
       top: 80px;
       left: 0;
       right: 0;
       height: 0px;
-      background: url('./img/menu360.webp') center center / cover no-repeat;
+      background: variables.$primary-dark-green;
       opacity: 0;
       pointer-events: none;
       transition: variables.$transition;
 
       &_active {
         transition: variables.$transition;
-        height: 550px; 
+        height: 498px; 
         opacity: 1;
         pointer-events: all;
       }
+    }
+    
+    &__line {
+       position: absolute;
+       top: -35px;
+       right: 3px;
+       z-index: -1;
     }
 
     &__list {
@@ -50,7 +57,8 @@
     
     &__li {
       a {
-        color: variables.$link-color;
+        font-style: italic;
+        color: variables.$secondary-light-white;
         font-size: variables.$font-size40;
         font-weight: variables.$font-weight400;
         text-decoration: none;
@@ -60,12 +68,13 @@
     &__button {
         width: 304px;
         height: 54px;
+        font-family: 'Poppins';
         text-align: center;
         @include mixins.flex(flex, center, center);
-        color: variables.$button-header;
+        color: variables.$secondary-light-white;
         font-size: variables.$font-size16;
         font-weight: variables.$font-weight500;
-        border: 1px solid variables.$border-header-button;
+        border: 1px solid variables.$secondary-light-white;
         border-radius: 61px;
         background: transparent;
         margin: 0 auto;
@@ -84,7 +93,7 @@
           transition: variables.$transition;
           width: 20px;
           height: 1.5px;
-          background: variables.$bg-line-burger;
+          background: variables.$secondary-light-white;
         }
 
         &_active {
@@ -110,7 +119,11 @@
         z-index: 2;
         @include mixins.flex(flex, space-between, center);
     }
-    
+
+    &__line {
+      display: none;
+    }
+
     &__nav-button-wrapper {
       @include mixins.flex(flex, space-between, center);
       gap: 20px;
@@ -135,6 +148,7 @@
     
     &__li {
       a {
+        font-style: normal;
         font-size: variables.$font-size14;
       }
     }
@@ -206,13 +220,13 @@
         }
         
         &__logo {
-            margin-left: -16px;
+            margin-left: 0;
             width: 192px;
             height: 32px;
         }
 
         &__nav-button-wrapper {
-          gap: 314px;
+          gap: 312px;
         }
 
         &__list {

@@ -4,7 +4,7 @@
 .main {
     position: relative;
     padding: 32px 24px;
-    background: variables.$main-color;
+    background: variables.$primary-dark-green;
 
     &__wrapper {
       display: grid;
@@ -17,17 +17,17 @@
         font-size: variables.$font-size48;
         font-weight: variables.$font-weight600;
         line-height: 100%;
-        color: variables.$text-color;
+        color: variables.$secondary-light-white;
     }
 
     &__hightlight {
         font-style: italic;
         font-weight: variables.$font-weight400;
-        color: variables.$text-hightlight;
+        color: variables.$primary-light-green;
     }
 
     &__text {
-        color: variables.$text-color-sub-main;
+        color: variables.$secondary-darker-white;
         font-size: variables.$font-size14;
         font-weight: variables.$font-weight400;
         line-height: 150%;
@@ -40,11 +40,12 @@
         height: 54px;
         cursor: pointer;
         text-align: center;
+        font-family: 'Poppins';
         @include mixins.flex(flex, center, center);
         border-radius: 29px;
         border: none;
-        background: variables.$primary-button;
-        color: variables.$primary-button-text;
+        background: variables.$primary-light-green;
+        color: variables.$primary-dark-green;
         font-size: variables.$font-size16;
         font-weight: variables.$font-weight500;
         text-align: left;
@@ -131,9 +132,17 @@
             opacity: 0.2;
             display: initial;
             position: absolute;
-            top: 23px;
-            right: -31px;
-            transform: rotateY(24deg);
+            top: 35px;
+            right: 0px;
+            transform: rotateY(-2deg);
+        }
+    }
+}
+
+@media(min-width: 2560px) {
+    .main {
+        &__lines {
+           display: none;
         }
     }
 }

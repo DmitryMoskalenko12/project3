@@ -3,7 +3,7 @@
 
 .helmet {
     padding: 80px 24px 80px 24px;
-    background: variables.$main-color2;
+    background: variables.$secondary-light-beige;
 
     &__img-wrapper {
       position: relative;
@@ -58,7 +58,7 @@
     }
 
     &__title {
-        color: variables.$main-color;
+        color: variables.$primary-dark-green;
         font-size: variables.$font-size32;
         font-weight: variables.$font-weight700;
         line-height: 110%;
@@ -67,7 +67,9 @@
     }
 
     &__sub-title {
-        color: variables.$main-color;
+        display: block;
+        margin-top: 10px;
+        color: variables.$primary-dark-green;
         font-size: variables.$font-size16;
         font-weight: variables.$font-weight400;
         text-align: left;
@@ -76,10 +78,10 @@
     &__button {
         width: 264px;
         height: 33px;
-        border: 1px solid variables.$main-color;
+        border: 1px solid variables.$primary-dark-green;
         border-radius: 29px;
         background: transparent;
-        color: variables.$main-color;
+        color: variables.$primary-dark-green;
         font-size: variables.$font-size12;
         font-weight: variables.$font-weight500;
         text-align: center;
@@ -98,12 +100,12 @@
         &:after {
             content:'';
             position: absolute;
-            height: 80.19px;
-            left: 43.9px;
-            transform: rotate(-25.13deg);
+            height: 87.19px;
+            left: 44.9px;
+            transform: rotate(-19.13deg);
             border: 1px solid variables.$line-color;
             opacity: 0.4;
-            margin-top: 14px;
+            margin-top: 21px;
         }
     }
 
@@ -116,9 +118,9 @@
         &:after {
             content:'';
             position: absolute;
-            height: 30.7px;
+            height: 35.7px;
             left: 32.46px;
-            transform: rotate(-16.99deg);
+            transform: rotate(-11.99deg);
             border: 1px solid variables.$line-color;
             opacity: 0.4;
             margin-top: 14px;
@@ -134,12 +136,12 @@
         &:after {
             content:'';
             position: absolute;
-            height: 68.54px;
-            left: 22px;
-            transform: rotate(-3.27deg);
+            height: 67.54px;
+            left: 17px;
+            transform: rotate(1.73deg);
             border: 1px solid variables.$line-color;
             opacity: 0.4;
-            margin-top: 16px;
+            margin-top: 24px;
         }
     }
 
@@ -152,12 +154,12 @@
         &:after {
             content:'';
             position: absolute;
-            height: 41.54px;
-            left: 9px;
-            transform: rotate(13.73deg);
+            height: 46.54px;
+            left: 6px;
+            transform: rotate(17.73deg);
             border: 1px solid variables.$line-color;
             opacity: 0.4;
-            margin-top: 16px;
+            margin-top: 11px;
         }
     }
 
@@ -170,12 +172,12 @@
         &:after {
             content:'';
             position: absolute;
-            height: 100.96px;
-            left: 9px;
-            transform: rotate(38.73deg);
+            height: 106.96px;
+            left: 2px;
+            transform: rotate(42.73deg);
             border: 1px solid variables.$line-color;
             opacity: 0.4;
-            margin-top: 10px;
+            margin-top: 2px;
         }
     }
 
@@ -188,12 +190,12 @@
         &:after {
             content:'';
             position: absolute;
-            height: 50.11px;
-            left: -17px;
-            transform: rotate(43.73deg);
+            height: 55.11px;
+            left: -21px;
+            transform: rotate(49.73deg);
             border: 1px solid variables.$line-color;
             opacity: 0.4;
-            margin-top: -7px;
+            margin-top: -11px;
         }
     }
 
@@ -206,12 +208,12 @@
         &:after {
             content:'';
             position: absolute;
-            height: 18.25px;
-            left: -14px;
-            transform: rotate(49.73deg);
+            height: 21.25px;
+            left: -20px;
+            transform: rotate(61.73deg);
             border: 1px solid variables.$line-color;
             opacity: 0.4;
-            margin-top: 5px;
+            margin-top: 0px;
         }
     }
 
@@ -400,7 +402,7 @@
 
         &__title2 {
             width: 528px;
-            color: variables.$main-color;
+            color: variables.$primary-dark-green;
             font-size: variables.$font-size56;
             font-weight: variables.$font-weight700;
             line-height: 110%;
@@ -409,7 +411,7 @@
         }
 
         &__sub-title2 {
-            color: variables.$main-color;
+            color: variables.$primary-dark-green;
             font-size: variables.$font-size24;
             font-weight: variables.$font-weight400;
             text-align: left;
@@ -431,10 +433,10 @@
             bottom: 64px;
             width: 220px;
             height: 54px;
-            border: 2px solid variables.$main-color;
+            border: 2px solid variables.$primary-dark-green;
             border-radius: 29px;
             background: transparent;
-            color: variables.$main-color;
+            color: variables.$primary-dark-green;
             font-size: variables.$font-size16;
             font-weight: variables.$font-weight500;
             text-align: center;

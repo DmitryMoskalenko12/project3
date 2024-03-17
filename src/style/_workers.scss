@@ -2,7 +2,7 @@
 @use './variables';
 
 .workers {
-    background: variables.$main-color;
+    background: variables.$primary-dark-green;
     padding: 72px 24px 1px 24px;
     position: relative;
     &__wrapper {
@@ -17,7 +17,7 @@
     }
 
     &__title {
-        color: variables.$text-color;
+        color: variables.$secondary-light-white;
         font-size: variables.$font-size32;
         font-weight: variables.$font-weight400;
         line-height: 110%;
@@ -25,7 +25,7 @@
     }
 
     &__hightlight {
-        color: variables.$text-hightlight;
+        color: variables.$primary-light-green;
     }
 
     &__vacancies {
@@ -33,10 +33,10 @@
         height: 30px;
         @include mixins.flex(flex, center, center);
         text-align: center;
-        border: 1px solid variables.$link-color;
+        border: 1px solid variables.$secondary-light-white;
         border-radius: 108px;
         text-decoration: none;
-        color: variables.$link-color;
+        color: variables.$secondary-light-white;
         font-size: variables.$font-size12;
         font-weight: variables.$font-weight400;
         line-height: 120%;
@@ -44,7 +44,7 @@
     }
 
     &__descr {
-        color: variables.$vacancies-text;
+        color: variables.$secondary-darker-white;
         font-size: variables.$font-size18;
         font-weight: variables.$font-weight400;
         line-height: 140%;
@@ -85,7 +85,7 @@
     }
 
     &__prof-title {
-        color: variables.$text-color;
+        color: variables.$secondary-light-white;
         font-size: variables.$font-size24;
         font-weight: variables.$font-weight500;
         text-align: left;
@@ -93,17 +93,18 @@
     }
 
     &__category {
-        width: 110px;
+        width: max-content;
         height: 30px;
         @include mixins.flex(flex, center, center);
         text-align: center;
         border-radius: 108px;
-        background: variables.$link-bg;
+        background: variables.$secondary-light-white;
         color: variables.$link-color-workers;
         font-size: variables.$font-size12;
         font-weight: variables.$font-weight400;
         text-transform: uppercase;
         text-decoration: none;
+        padding: 8px 16px 8px 16px;
     }
 
     &__link {
@@ -112,7 +113,7 @@
         left: 18px;
         a {
             @include mixins.flex(flex, center, center);
-            color: variables.$link-color;
+            color: variables.$secondary-light-white;
             font-size: variables.$font-size14;
             font-weight: variables.$font-weight400;
             text-align: center;
@@ -126,7 +127,7 @@
         width: 100%;
         height: 368px;
         padding: 24px;
-        background: variables.$apen-bg;
+        background: variables.$primary-light-green;
     }
 
     &__apen-logo {
@@ -182,6 +183,11 @@
         right: 0px;
         top: -69px;
         z-index: 1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
     }
 
     &__lines2 {
@@ -327,6 +333,12 @@
             grid-template-columns: 640px 640px;
             gap: 32px;
             margin-bottom: 0;
+            margin-top: 104px;
+        }
+
+        &__vacancies {
+           width: 111px;
+           height: 33px;
         }
 
         &__text-block {
@@ -411,6 +423,14 @@
     .workers {
         &__prof-block {
             width: 93%;
+        }
+    }
+}
+
+@media(min-width: 2560px) {
+    .workers {
+        &__lines2 {
+           display: none;
         }
     }
 }
